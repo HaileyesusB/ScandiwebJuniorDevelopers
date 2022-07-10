@@ -1,13 +1,13 @@
 <?php
 require_once "templates/header.php";
-include "abstract/base.abstract.php";
-include "classes/main.class.php";
+include "abstract/product.php";
+include "classes/mainClass.php";
 ?>
 
-<form id="product_form" action="post.process.php" method="POST">
+<form id="product_form" action="post.php" method="POST">
      <div class="row my-5">
           <div class="col-md-6 text-left">
-               <h3>PRODUCT LIST</h3>
+               <h1>Product List</h1>
           </div>
           <div class="col-md-6 text-right">
                <a href="addToDb.php" class="btn btn-secondary">

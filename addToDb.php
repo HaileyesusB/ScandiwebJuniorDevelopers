@@ -1,9 +1,9 @@
 <?php
 require_once "templates/header.php";
-include "post.process.php";
+include "post.php";
 ?>
 
-<form id="product_form" action="post.process.php" method="POST">
+<form id="product_form" action="post.php" method="POST">
   <div class="row my-5">
     <div class="col-md-6 text-left">
       <h1>Product Add</h1>

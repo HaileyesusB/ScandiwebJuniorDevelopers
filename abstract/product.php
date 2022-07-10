@@ -1,6 +1,6 @@
 <?php
 
-include "classes/dbh.class.php";
+include "classes/dataBaseClass.php";
 
 abstract class Main extends Dbh
 {

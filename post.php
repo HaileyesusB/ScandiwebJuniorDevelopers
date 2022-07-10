@@ -1,10 +1,10 @@
 <?php
 
-include "abstract/base.abstract.php";
-include "classes/main.class.php";
-include "classes/disk.class.php";
-include "classes/furniture.class.php";
-include "classes/book.class.php";
+include "abstract/product.php";
+include "classes/mainClass.php";
+include "classes/diskClass.php";
+include "classes/furnitureClass.php";
+include "classes/bookClass.php";
 include "validator.php";
 
 // SANAZTIZING DATA
@@ -50,7 +50,7 @@ if (isset($_POST["productType"]) && isset($_POST["Save"])) {
 
       $productData->addPost();
 
-      header("location:index.php?status=added");
+      header("location:index.php?status=success");
     }
 
     // VALIDATION
