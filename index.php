@@ -10,7 +10,7 @@ include "classes/main.class.php";
                <h3>PRODUCT LIST</h3>
           </div>
           <div class="col-md-6 text-right">
-               <a href="PAindex.php" class="btn btn-primary">
+               <a href="addToDb.php" class="btn btn-secondary">
                     ADD
                </a>
                <button type="submit" name="delete" class="btn btn-danger">

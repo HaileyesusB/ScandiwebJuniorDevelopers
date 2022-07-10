@@ -61,7 +61,7 @@ if (isset($_POST["productType"]) && isset($_POST["Save"])) {
       $error .= "&" . $key . "=" . $val;
     }
 
-    header("location:PAindex.php?status=validated" . $error);
+    header("location:addToDb.php?status=validated" . $error);
   }
 }
 

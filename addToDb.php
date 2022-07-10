@@ -29,7 +29,7 @@ include "post.process.php";
   <div class="form-group row">
     <label class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-3">
-      <input name="Name" type="text" class="form-control" id="name">
+      <input name="Name" type="varchar" class="form-control" id="name">
       <span class="error"><?php echo $_GET['Name'] ?? '' ?></span>
     </div>
   </div>
@@ -41,8 +41,8 @@ include "post.process.php";
     </div>
   </div>
   <div class="dropdown">
-    <label class="col-sm-2 col-form-label"><strong>Type Switcher</strong></label>
-    <select class="dropdown-toggle" type="button" id="productType" name="productType" onchange="getCall(this.value);">
+    <label class="col-sm-2 col-form-label">Type Switcher</label>
+    <select class="dropdown-toggle" type="button" id="productType" name="productType" style="width: 260px;" onchange="getCall(this.value);">
       <option value="">Select</option>
       <option value="DVD">DVD-Disc</option>
       <option value="Furniture">Furniture</option>
@@ -53,9 +53,9 @@ include "post.process.php";
   <div id="DVD" class="controls" style="display: none;">
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Size (MB)</label>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <input name="Size" type="number" class="form-control" id="size"><br>
-        <strong><?php echo "Please, provide size" ?></strong>
+        <strong><?php echo "Please, provide disc space in MB" ?></strong>
       </div>
     </div>
   </div>
@@ -82,10 +82,10 @@ include "post.process.php";
   </div>
   <div id="Book" class="controls" style="display: none;">
     <div class="form-group row">
-      <label class="col-sm-2 col-form-label">Weight (CM)</label>
-      <div class="col-sm-2">
+      <label class="col-sm-2 col-form-label">Weight (KG)</label>
+      <div class="col-sm-3">
         <input name="Weight" type="number" class="form-control" id="weight"><br>
-        <strong><?php echo "Please, provide weight" ?></strong>
+        <strong><?php echo "Please, provide weight in KG" ?></strong>
       </div><br>
     </div>
   </div>
