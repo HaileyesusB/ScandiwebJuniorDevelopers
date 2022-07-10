@@ -6,7 +6,7 @@ include "post.process.php";
 <form id="product_form" action="post.process.php" method="POST">
   <div class="row my-5">
     <div class="col-md-6 text-left">
-      <h3>PRODUCT ADD</h3>
+      <h1>Product Add</h1>
     </div>
     <div class="col-md-6 text-right">
       <a href="index.php" name="Cancel" class="btn btn-secondary">
@@ -42,8 +42,8 @@ include "post.process.php";
   </div>
   <div class="dropdown">
     <label class="col-sm-2 col-form-label">Type Switcher</label>
-    <select class="dropdown-toggle" type="button" id="productType" name="productType" style="width: 260px;" onchange="getCall(this.value);">
-      <option value="">Select</option>
+    <select class="dropdown-toggle" type="button" id="productType" name="productType" style="width: 300px;" onchange="getCall(this.value);">
+      <option value="">Type Switcher</option>
       <option value="DVD">DVD-Disc</option>
       <option value="Furniture">Furniture</option>
       <option value="Book">Book</option><br>
@@ -62,19 +62,19 @@ include "post.process.php";
   <div for="Dimensions" name="dimensions" id="Furniture" class="controls" style="display: none;">
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Height (CM)</label>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <input name="height" type="number" class="form-control" id="height">
       </div>
     </div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Width (CM)</label>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <input name="width" type="number" class="form-control" id="width">
       </div>
     </div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Length (CM)</label>
-      <div class="col-sm-2">
+      <div class="col-sm-3">
         <input name="length" type="number" class="form-control" id="length"><br>
         <strong><?php echo "Please, provide dimensions" ?></strong>
       </div><br>
