@@ -34,7 +34,7 @@ class UserValidator
   {
     $val = $this->Sku;
     if (empty($val)) {
-      $this->addError('Sku', 'Please, submit required data');
+      $this->addError('Sku', 'Please, Provide the SKU');
     } else {
       if (!preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $val)) {
         $this->addError('Sku', 'Please, provide the data of indicated type');
@@ -48,10 +48,10 @@ class UserValidator
   {
     $val = $this->Name;
     if (empty($val)) {
-      $this->addError('Name', 'Please, submit required data');
+      $this->addError('Name', 'Please, Provide the NAME');
     } else {
       if (!preg_match('/^[a-zA-Z -]*$/', $val)) {
-        $this->addError('Name', 'Please, provide the data of indicated type');
+        $this->addError('Name', 'Please, provide valid Alphabet or Numeric names');
       }
     }
   }
@@ -63,10 +63,10 @@ class UserValidator
     $val = $this->Price;
 
     if (empty($val)) {
-      $this->addError('Price', 'Please, submit required data');
+      $this->addError('Price', 'Please, Provide the PRICE');
     } else {
       if (!preg_match('/^[0-9]*$/', $val)) {
-        $this->addError('Price', 'Please, provide the data of indicated type');
+        $this->addError('Price', 'Please, provide Numbers Only');
       }
     }
   }
@@ -77,7 +77,7 @@ class UserValidator
   {
     $val = $this->ProductType;
     if (empty($val)) {
-      $this->addError('ProductType', 'Please, submit required data');
+      $this->addError('ProductType', 'Please, Select the Type of Product');
     } else {
       if (!preg_match('/^[a-zA-Z -]*$/', $val)) {
         $this->addError('ProductType', 'Please, provide the data of indicated type');
