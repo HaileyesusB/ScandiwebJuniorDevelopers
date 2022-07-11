@@ -1,11 +1,11 @@
 <?php
 
-include "classes/product.php";
+include "classes/productClass.php";
 include "classes/mainClass.php";
 include "classes/diskClass.php";
 include "classes/furnitureClass.php";
 include "classes/bookClass.php";
-include "classes/validator.php";
+include "classes/validatorClass.php";
 
 // SANAZTIZING DATA
 

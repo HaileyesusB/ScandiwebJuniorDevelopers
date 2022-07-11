@@ -1,6 +1,6 @@
 <?php
 require_once "templates/header.php";
-include "classes/product.php";
+include "classes/productClass.php";
 include "classes/mainClass.php";
 ?>
 
