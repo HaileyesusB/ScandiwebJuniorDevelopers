@@ -1,6 +1,7 @@
 <?php
 require_once "templates/header.php";
 include "post.php";
+$post = new post();
 ?>
 
 <form id="product_form" action="post.php" method="POST">

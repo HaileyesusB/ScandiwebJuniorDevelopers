@@ -8,25 +8,26 @@ include "classes/bookClass.php";
 include "classes/validatorClass.php";
 
 // SANAZTIZING DATA
-
-function sanatize($data)
+class post
 {
-  $data = trim($data);
-  $data = htmlspecialchars($data);
-  $data = stripslashes($data);
-  return $data;
+  public function sanatize($data)
+  {
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    $data = stripslashes($data);
+    return $data;
+  }
 }
 
 // DATA HANDLING
 
-$errors = [];
-
 if (isset($_POST["productType"]) && isset($_POST["Save"])) {
+  $post = new post();
 
-  $productType = sanatize($_POST["productType"]);
-  $sku = sanatize($_POST['Sku']);
-  $name = sanatize($_POST['Name']);
-  $price = sanatize($_POST['Price']);
+  $productType = $post->sanatize($_POST["productType"]);
+  $sku = $post->sanatize($_POST['Sku']);
+  $name = $post->sanatize($_POST['Name']);
+  $price = $post->sanatize($_POST['Price']);
 
   $validation = new UserValidator($sku, $name, $price, $productType);
   $errors = $validation->validateForm();
@@ -46,7 +47,7 @@ if (isset($_POST["productType"]) && isset($_POST["Save"])) {
         $attribute .= isset($_POST[$att]) ? " " . $att . ": " . $_POST[$att] . ", " : "";
       }
 
-      $productData->setAttribute(sanatize($attribute));
+      $productData->setAttribute($post->sanatize($attribute));
 
       $productData->addPost();
 
@@ -66,7 +67,6 @@ if (isset($_POST["productType"]) && isset($_POST["Save"])) {
 }
 
 // DELETING DATA
-
 else if (isset($_POST['delete'])) {
   $productData = new ProductMain();
   $id = $_POST['ProductID'];
