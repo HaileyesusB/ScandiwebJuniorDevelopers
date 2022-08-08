@@ -1,7 +1,7 @@
 <?php
 
-include "classes/productClass.php";
-include "classes/mainClass.php";
+include "classes/main.php";
+include "classes/productMain.php";
 include "classes/diskClass.php";
 include "classes/furnitureClass.php";
 include "classes/bookClass.php";

@@ -2,7 +2,7 @@
 
 class ProductMain extends Main
 {
-    // SETTERS
+    // SETTERS 
 
     public function setId($id)
     {

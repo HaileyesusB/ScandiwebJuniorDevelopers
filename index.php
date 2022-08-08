@@ -1,7 +1,7 @@
 <?php
 require_once "templates/header.php";
-include "classes/productClass.php";
-include "classes/mainClass.php";
+include "classes/main.php";
+include "classes/productMain.php";
 ?>
 
 <form id="product_form" action="post.php" method="POST">
